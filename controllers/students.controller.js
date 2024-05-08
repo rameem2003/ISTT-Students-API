@@ -5,25 +5,21 @@ const getAllStudents = (req, res) => {
 };
 
 const getSingleUser = (req, res) => {
-let {id} = req.params;
+  let { id } = req.params;
 
-let getOne = users.find((user) => user.id == id)
+  let getOne = users.find((user) => user.id == id);
 
-res.status(200).send(getOne)
-
-}
-
+  res.status(200).send(getOne);
+};
 
 const deleteOne = (req, res) => {
-  let {id} = req.params;
+  let { id } = req.params;
 
-  let newArray = users.filter((user) => user.id !== id)
+  let newArray = users.filter((user) => user.id !== id);
 
-  users = newArray
+  users = newArray;
 
-  res.status(200).send(users)
+  res.status(200).send(users);
+};
 
-}
-
-
-module.exports = { getAllStudents, getSingleUser , deleteOne};
+module.exports = { getAllStudents, getSingleUser, deleteOne };
