@@ -1,22 +1,75 @@
-const { v4: uuidv4 } = require("uuid");
+const mongoose = require("mongoose");
 
-const users = [
-  {
-    id: uuidv4(),
-    name: "Mahmood Hassan Rameem",
+const studentsSchema = mongoose.Schema({
+  studentNameBangla: {
+    type: String,
+    require: true,
   },
-  {
-    id: uuidv4(),
-    name: "Fahmida Yeasmin",
-  },
-  {
-    id: uuidv4(),
-    name: "Jahedul Islam Rasel",
-  },
-  {
-    id: uuidv4(),
-    name: "Abdul Baten",
-  },
-];
 
-module.exports = users;
+  studentNameEnglish: {
+    type: String,
+    require: true,
+  },
+
+  status: {
+    type: Boolean,
+    default: false,
+  },
+
+  department: {
+    type: String,
+    require: true,
+  },
+
+  diplomaBoardRoll: {
+    type: String,
+    require: true,
+  },
+  diplomaBoardReg: {
+    type: String,
+    require: true,
+  },
+  studentImage: {
+    type: String,
+    require: true,
+  },
+  fathersName: {
+    type: String,
+    require: true,
+  },
+  mothersName: {
+    type: String,
+    require: true,
+  },
+  session: {
+    type: String,
+    require: true,
+  },
+
+  bloodGroup: {
+    type: String,
+    require: true,
+  },
+
+  sscGroup: {
+    type: String,
+    require: true,
+  },
+
+  sscResult: {
+    type: String,
+    require: true,
+  },
+
+  dob: {
+    type: String,
+    require: true,
+  },
+
+  email: {
+    type: String,
+    require: true,
+  },
+});
+
+module.exports = mongoose.model("students", studentsSchema);
