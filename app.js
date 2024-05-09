@@ -2,6 +2,8 @@ const express = require("express"); // init express js
 const body_parser = require("body-parser"); // init body parser
 const cors = require("cors"); // init cors
 const app = express(); // create new app
+require("./config/database");
+
 // import all routers
 const studentRouters = require("./routes/students.route");
 
