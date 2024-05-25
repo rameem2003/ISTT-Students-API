@@ -22,11 +22,11 @@ const studentsSchema = mongoose.Schema({
   },
 
   diplomaBoardRoll: {
-    type: String,
+    type: Number,
     require: true,
   },
   diplomaBoardReg: {
-    type: String,
+    type: Number,
     require: true,
   },
   studentImage: {
