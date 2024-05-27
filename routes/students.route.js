@@ -11,6 +11,6 @@ router.get("/", getAllStudents);
 router.get("/:roll", getSingleStudent);
 router.post("/", addNewStudent);
 router.put("/:roll", updateOneStudent);
-router.delete("/:id", deleteOneStudent);
+router.delete("/:roll", deleteOneStudent);
 
 module.exports = router;
