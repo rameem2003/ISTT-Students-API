@@ -15,6 +15,10 @@ const studentsSchema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  status: {
+    type: String,
+    require: true,
+  },
 
   department: {
     type: String,
