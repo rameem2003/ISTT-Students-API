@@ -47,6 +47,7 @@ const addNewStudent = async (req, res) => {
       studentNameBangla,
       studentNameEnglish,
       status,
+      gender,
       department,
       diplomaBoardRoll,
       diplomaBoardReg,
